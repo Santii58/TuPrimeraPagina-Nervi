@@ -1,0 +1,47 @@
+{% extends 'core/padre.html' %}
+{% load static %}
+
+{% block title %}Alumnos{% endblock %}
+
+{% block content %}
+    <h1 class="display-5 mb-4">Listado de Alumnos</h1>
+    <p class="text-muted mb-4">Esta es una tabla de ejemplo con alumnos registrados.</p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-primary">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@email.com</td>
+                    <td>Matemáticas</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Laura</td>
+                    <td>González</td>
+                    <td>laura.gonzalez@email.com</td>
+                    <td>Historia</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos</td>
+                    <td>Ramírez</td>
+                    <td>carlos.ramirez@email.com</td>
+                    <td>Biología</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
