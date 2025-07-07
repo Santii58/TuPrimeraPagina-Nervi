@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from .views import padre
+from .views import inicio, cursos, alumnos, docentes
 
 urlpatterns = [
-    path('', padre, name='inicio'),
-    path('cursos/', padre, name='cursos'),
-    path('alumnos/', padre, name='alumnos'),
-    path('profesores/', padre, name='profesores'),
+
+    path('inicio/', inicio, name='inicio'),
+    path('cursos/', cursos, name='cursos'),
+    path('alumnos/', alumnos, name='alumnos'),
+    path('profesores/', docentes, name='profesores'),
 ]

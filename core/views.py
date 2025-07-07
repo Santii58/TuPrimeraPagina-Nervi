@@ -3,8 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def padre(request):
-    return render(request, 'core/padre.html')
+
+
+def inicio(request):
+    return render(request, 'core/inicio.html')
 
 def cursos(request):
     return render(request, 'core/cursos.html')
