@@ -1,19 +1,17 @@
 from django import forms
+from .models import Cursos, Alumnos, Profesores
 
-class CursosForm(forms.Form):
-    nombre = forms.CharField(max_length=100, label='Nombre del Curso')
-    descripcion = forms.CharField(widget=forms.Textarea, label='Descripción')
-    fecha_inicio = forms.DateTimeField(label='Fecha de Inicio')
-    fecha_fin = forms.DateTimeField(label='Fecha de Fin')
+class CursosForm(forms.ModelForm):
+    class Meta:
+        model = Cursos
+        fields = ['nombre', 'descripcion', 'fecha_inicio', 'fecha_fin']  # Incluye los campos de fecha
 
-class AlumnosForm(forms.Form):
-    nombre = forms.CharField(max_length=100, label='Nombre del Alumno')
-    apellido = forms.CharField(max_length=100, label='Apellido del Alumno')
-    email = forms.EmailField(label='Email del Alumno')
-    fecha_nacimiento = forms.DateField(label='Fecha de Nacimiento')
+class AlumnosForm(forms.ModelForm):
+    class Meta:
+        model = Alumnos
+        fields = ['nombre', 'apellido', 'email', 'fecha_nacimiento']
 
-class ProfesorsForm(forms.Form):
-    nombre = forms.CharField(max_length=100, label='Nombre del Profesor')
-    apellido = forms.CharField(max_length=100, label='Apellido del Profesor')
-    email = forms.EmailField(label='Email del Profesor')
-    especialidad = forms.CharField(max_length=100, label='Especialidad del Profesor')
+class ProfesoresForm(forms.ModelForm):
+    class Meta:
+        model = Profesores
+        fields = ['nombre', 'apellido', 'email', 'especialidad']

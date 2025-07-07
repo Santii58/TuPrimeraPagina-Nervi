@@ -3,7 +3,12 @@
 {% block title %}Cursos - Mi Proyecto{% endblock %}
 
 {% block content %}
-<h1 class="mb-4"><i class="bi bi-journal-bookmark"></i> Cursos</h1>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0"><i class="bi bi-journal-bookmark"></i> Cursos</h1>
+    <a href="{% url 'agregar_curso' %}" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Agregar Curso
+    </a>
+</div>
 {% if cursos %}
     <ul class="list-group">
         {% for curso in cursos %}

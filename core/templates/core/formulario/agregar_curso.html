@@ -1,0 +1,14 @@
+{% extends 'core/padre.html' %}
+{% load static %}
+{% block title %}Agregar Curso{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Agregar Curso</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+{% endblock %}
