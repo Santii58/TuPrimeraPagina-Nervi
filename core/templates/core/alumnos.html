@@ -5,10 +5,16 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h1 class="mb-0"><i class="bi bi-people"></i> Alumnos</h1>
-    <a href="{% url 'agregar_alumno' %}" class="btn btn-primary">
-        <i class="bi bi-plus-circle"></i> Agregar Alumno
-    </a>
+    <div>
+        <a href="{% url 'buscar_alumno' %}" class="btn btn-outline-secondary me-2">
+            <i class="bi bi-search"></i> Buscar Alumno
+        </a>
+        <a href="{% url 'agregar_alumno' %}" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Agregar Alumno
+        </a>
+    </div>
 </div>
+
 {% if alumnos %}
     <ul class="list-group">
         {% for alumno in alumnos %}

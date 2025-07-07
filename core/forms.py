@@ -15,3 +15,10 @@ class ProfesoresForm(forms.ModelForm):
     class Meta:
         model = Profesores
         fields = ['nombre', 'apellido', 'email', 'especialidad']
+        
+
+
+class BuscarAlumnoForm(forms.Form):
+    nombre = forms.CharField(label='Nombre', max_length=100, required=False)
+    apellido = forms.CharField(label='Apellido', max_length=100, required=False)
+    

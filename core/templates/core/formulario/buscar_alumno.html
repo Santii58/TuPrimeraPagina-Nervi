@@ -1,0 +1,20 @@
+{% extends "core/padre.html" %}
+
+{% block content %}
+  <h2>Buscar Alumnos</h2>
+  <form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if alumnos %}
+    <h3>Resultados:</h3>
+    <ul>
+      {% for alumno in alumnos %}
+        <li>{{ alumno.nombre }} {{ alumno.apellido }} - {{ alumno.email }} - {{ alumno.fecha_nacimiento }}</li>
+      {% endfor %}
+    </ul>
+  {% elif form.is_bound %}
+    <p>No se encontraron alumnos.</p>
+  {% endif %}
+{% endblock %}
