@@ -16,7 +16,7 @@ class Alumnos(models.Model):
     email = models.EmailField()
     fecha_nacimiento = models.DateField()
 
-class Docentes(models.Model):
+class Profesores(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField()

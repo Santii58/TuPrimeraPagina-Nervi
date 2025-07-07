@@ -1,0 +1,18 @@
+{% extends 'core/padre.html' %}
+
+{% block title %}Alumnos - Mi Proyecto{% endblock %}
+
+{% block content %}
+<h1 class="mb-4"><i class="bi bi-people"></i> Alumnos</h1>
+{% if alumnos %}
+    <ul class="list-group">
+        {% for alumno in alumnos %}
+            <li class="list-group-item">
+                {{ alumno.nombre }} {{ alumno.apellido }} - {{ alumno.email }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay alumnos registrados.</p>
+{% endif %}
+{% endblock %}
